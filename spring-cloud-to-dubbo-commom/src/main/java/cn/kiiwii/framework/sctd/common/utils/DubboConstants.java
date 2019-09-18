@@ -1,7 +1,7 @@
 package cn.kiiwii.framework.sctd.common.utils;
 
 /**
- * 项目名  platform-parent
+ * 项目名  springcloud-to-dubbo
  * Created by zhongdev.
  * Created at 2019-06-27
  */
