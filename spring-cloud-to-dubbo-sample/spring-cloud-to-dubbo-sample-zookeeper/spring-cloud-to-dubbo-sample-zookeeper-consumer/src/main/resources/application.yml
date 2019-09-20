@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /spring-cloud-to-dubbo-sample-zookeeper-consumer
+  port: 11000
+spring:
+  application:
+    name: spring-cloud-to-dubbo-sample-zookeeper-consumer
+dubbo:
+  registry:
+    address: localhost:2181
+    protocol: zookeeper

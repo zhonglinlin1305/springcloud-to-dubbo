@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /spring-cloud-to-dubbo-sample-zookeeper-provider
+  port: 11001
+spring:
+  application:
+    name: spring-cloud-to-dubbo-sample-zookeeper-provider
+dubbo:
+  registry:
+    address: localhost:2181
+    protocol: zookeeper
+debug: true
+logging:
+  level:
+    com.alibaba.nacos.client.naming: debug

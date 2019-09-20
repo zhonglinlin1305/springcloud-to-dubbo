@@ -13,4 +13,11 @@
     <artifactId>spring-cloud-to-dubbo-sample-zookeeper-provider</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.kiiwii.framework</groupId>
+            <artifactId>spring-cloud-to-dubbo-zooKeeper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -9,8 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.kiiwii.framework</groupId>
     <artifactId>spring-cloud-to-dubbo-sample-nacos-provider</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>cn.kiiwii.framework</groupId>
+            <artifactId>spring-cloud-to-dubbo-nacos</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

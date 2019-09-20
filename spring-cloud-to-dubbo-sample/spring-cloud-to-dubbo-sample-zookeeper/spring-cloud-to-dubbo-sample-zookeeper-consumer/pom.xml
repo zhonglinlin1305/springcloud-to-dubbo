@@ -9,8 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.kiiwii.framework</groupId>
     <artifactId>spring-cloud-to-dubbo-sample-zookeeper-consumer</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.kiiwii.framework</groupId>
+            <artifactId>spring-cloud-to-dubbo-zooKeeper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

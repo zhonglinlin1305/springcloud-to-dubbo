@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.jdrx.platform.dubbo.zookeeper.DubboZookeeperAutoConfig
+cn.kiiwii.framework.sctd.zookeeper.DubboZookeeperAutoConfig

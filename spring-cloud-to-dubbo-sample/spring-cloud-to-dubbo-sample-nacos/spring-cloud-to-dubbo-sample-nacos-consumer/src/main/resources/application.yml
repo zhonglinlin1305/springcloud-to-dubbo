@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /spring-cloud-to-dubbo-sample-nacos-consumer
+  port: 10000
+spring:
+  application:
+    name: spring-cloud-to-dubbo-sample-nacos-consumer
+dubbo:
+  registry:
+    address: localhost:8848
+    protocol: nacos
+debug: true
+logging:
+  level:
+    cn.kiiwii.framework.sctd.nacos.registry.NacosRegistry: error
