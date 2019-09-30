@@ -16,6 +16,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonInputMessage;
+import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerMapping;
@@ -107,14 +108,16 @@ public class DubboRpcServiceImpl implements IDubboRpcService, ApplicationContext
 
     /**
      * 具体执行controller接口的方法
-     * @param method            方法的名称
-     * @param instance          类的对象实例
-     * @param parameterValues   方法的参数
-     * @return                  返回controller层返回的对象
-     * @throws Exception        如果controller抛出异常，会进入全局异常的处理
+     *
+     * @param method          方法的名称
+     * @param instance        类的对象实例
+     * @param parameterValues 方法的参数
+     * @return 返回controller层返回的对象
+     * @throws Exception 如果controller抛出异常，会进入全局异常的处理
      */
     private Object doInvoke(Method method, Object instance, Object[] parameterValues) throws Exception {
         try {
+            ReflectionUtils.makeAccessible(method);
             if (parameterValues == null) {
                 return method.invoke(instance);
             } else {
